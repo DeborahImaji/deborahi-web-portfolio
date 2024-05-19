@@ -1,107 +1,159 @@
-body {
-    margin: 0;
+/* For the Fonts */
+@font-face {
+  font-family: 'futura';
+  src: url('fonts\FUTURA55REGULAR.TTF') format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
 
-nav {
-    position: fixed; /* Fix the navigation bar to the top */
-    top: 0;
-    width: 100%;
+@font-face {
+  font-family: 'futura';
+  src: url('fonts\FUTURA45LIGHT.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futura';
+  src: url('fonts\FUTURA75BOLD.TTF') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  /* Fix the navigation bar to the top */
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background-color: white !important;
+  position: fixed;
+  z-index: 1000;
 }
 
 .navigation-bar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica";
-    background-color: transparent;
+  list-style-type: none;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 0;
+  padding: 0.7em;
+  font-family: 'futura';
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  background-color: white !important;
 }
 
 .navigation-list-item {
-    float: right;
+  float: left;
+  display: flex;
+  position: relative;
 }
 
 .navigation-links {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    color: black;
-    border-radius: 25px;
+  display: flex;
+  padding: 15px;
+  text-decoration: none;
+  color: #414140;
+  border-radius: 25px;
+  position: relative;
+  text-align: center;
+}
+
+li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 20px;
+  left: 0;
+  right: 0;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(0%);
+  background: #414140;
+  transition: width 0s ease;
+}
+
+li a:hover::after {
+  width: 80%; /* Expand the line to full width on hover */
 }
 
 .active {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    color: black;
-    border-radius: 25px;
-    background: linear-gradient(to right, #fd89e0, #82a3f0);
+  text-decoration: none;
+  color: #414140;
 }
 
-li a:hover {
-    background-color: #A894B4;
+.active::after {
+  display: block;
+  padding: 0px;
+  text-decoration: none;
+  color: #414140;
+  width: 80%;
+  margin-top: 5px;
+}
+
+/* Homepage: Section 1 */
+.homepage-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust based on your design */
+  overflow: hidden;
+}
+
+.homepage-video {
+  display: flex;
+   width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homepage-text {
+  position: absolute;
+    top: 55%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    color: #414140;
+    text-align: center;
+}
+
+.homepage-paragraph {
+  font-family: 'futura';
+  font-weight: 400;
+  font-size: 30px;
+  font-style: normal;
+  color: #414140;
 }
 
 .homepage-heading {
-    position: absolute; /* Absolute positioning within viewport */
-  top: 40%; /* Center vertically */
-  left: 68%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust positioning for better centering */
-  color: #62496F; /* Assuming you want white text */
-  text-align: center; /* Center align text */
-  font-size: 3.4em; /* Adjust font size as needed */
-  font-family: "Fredoka One";
+  font-family: 'futura';
+  font-weight: 600;
+  font-size: 60px;
+  font-style: normal;
+  color: #414140;
 }
 
-.homepage-subtitle {
-    position: absolute; /* Absolute positioning within viewport */
-  top: 60%; /* Center vertically */
-  left: 68%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust positioning for better centering */
-  color: #62496F; /* Assuming you want white text */
-  text-align: center; /* Center align text */
-  font-size: 2em; /* Adjust font size as needed */
-  font-family: "Fredoka One";
-}
-
-.view-my-work-button {
-    position: absolute;
-    top: 80%;
-    left: 54%;
-    transform: translate(-50%, -50%)
-
-    background-color: #04AA6D; /* Green */
+.homepage-button {
+  background-color: white;
   border: none;
-  color: black;
+  color: #414140;
   padding: 15px 32px;
-  border-radius: 25px;
+  border-radius: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-family: 'futura';
+  font-weight: 400;
   font-size: 16px;
 }
 
-.contact-me-button {
-    position: absolute;
-    top: 80%;
-    left: 71%;
-    transform: translate(-50%, -50%)
-
-    background-color: #04AA6D; /* Green */
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  border-radius: 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+.homepage-button:hover {
+  padding: 20px 37px;
 }
-
-.view-my-work-button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
-
-  .contact-me-button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
-  
