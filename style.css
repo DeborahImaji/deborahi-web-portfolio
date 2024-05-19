@@ -1,3 +1,4 @@
+
 /* For the Fonts */
 @font-face {
   font-family: 'futura';
@@ -17,6 +18,13 @@
   font-family: 'futura';
   src: url('fonts\FUTURA75BOLD.TTF') format('truetype');
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futura';
+  src: url('fonts\FUTURA65MEDIUM.TTF') format('truetype');
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -83,7 +91,8 @@ li a::after {
 }
 
 li a:hover::after {
-  width: 80%; /* Expand the line to full width on hover */
+  width: 80%;
+  /* Expand the line to full width on hover */
 }
 
 .active {
@@ -104,24 +113,25 @@ li a:hover::after {
 .homepage-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Adjust based on your design */
+  height: 100vh;
+  /* Adjust based on your design */
   overflow: hidden;
 }
 
 .homepage-video {
   display: flex;
-   width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .homepage-text {
   position: absolute;
-    top: 55%;
-    left: 67%;
-    transform: translate(-50%, -50%);
-    color: #414140;
-    text-align: center;
+  top: 55%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  color: #414140;
+  text-align: center;
 }
 
 .homepage-paragraph {
@@ -156,4 +166,126 @@ li a:hover::after {
 
 .homepage-button:hover {
   padding: 20px 37px;
+}
+
+/* Home Screen: Section 2 */
+.homescreen2-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Adjust based on your design */
+  overflow: hidden;
+  text-align: center;
+}
+
+.homescreen2-heading {
+  text-align: center;
+  color: #414140;
+  font-family: 'futura';
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.homescreen2-paragraph {
+  text-align: center;
+  color: #414140;
+  font-family: 'futura';
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.homescreen2-button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'futura';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.homescreen2-button:hover {
+  background-color: #D8CADF;
+  color: #414140;
+}
+
+
+/* About Me Page */
+
+.about-me-heading {
+  box-sizing: border-box;
+  color: #414140;
+  display: block;
+  font-family: 'futura';
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 31.2px;
+  margin-block-end: 12.48px;
+  margin-block-start: 0px;
+  margin-bottom: 12.48px;
+  margin-inline-end: 25px;
+  margin-inline-start: 25px;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.about-me-intro-p1 {
+  box-sizing: border-box;
+  color: #414140;
+  font-family: 'futura';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 16px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.about-me-intro-p2 {
+  box-sizing: border-box;
+  color: #414140;
+  font-family: 'futura';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.about-me-profile-pic {
+  margin-top: 55px;
+  width: 100%;
+}
+
+.about-me-name {
+  box-sizing: border-box;
+  color: #414140;
+  font-family: 'futura';
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 55px;
+  margin-left: 5%;
+}
+
+.about-me-content {
+  box-sizing: border-box;
+  color: #414140;
+  font-family: 'futura';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
