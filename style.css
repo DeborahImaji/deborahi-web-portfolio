@@ -31,6 +31,11 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color from parent element */
+}
+
 .navbar {
   /* Fix the navigation bar to the top */
   top: 0;
@@ -62,12 +67,12 @@ body {
   position: relative;
 }
 
+
 .navigation-links {
   display: flex;
   padding: 15px;
   text-decoration: none;
   color: #414140;
-  border-radius: 25px;
   position: relative;
   text-align: center;
 }
@@ -94,18 +99,11 @@ body {
   /* Expand the line to full width on hover */
 }
 
-.active {
-  text-decoration: none;
-  color: #414140;
-}
 
-.active::after {
-  display: block;
-  padding: 0px;
-  text-decoration: none;
-  color: #414140;
-  width: 80%;
-  margin-top: 5px;
+.navigation-active {
+  padding: 6px;
+  border-bottom: 2px solid #414140;
+  
 }
 
 /* Homepage: Section 1 */
@@ -382,9 +380,18 @@ body {
 
 /* Projects Gallery */
 
+.projects-gallery-container {
+  display: flex;
+  min-height: 50vh; /* Set minimum height to viewport height */
+  justify-content: center; /* Center content vertically */
+  align-items: center;
+}
+
 .projects-gallery {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-gallery ul {
@@ -392,11 +399,13 @@ body {
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-gallery li {
-  margin: 10px;
-  width: 25%;
+  margin: 20px;
+  width: 35%;
   outline: none;
   box-shadow: none;
 }
@@ -407,3 +416,59 @@ body {
   object-fit: cover;
 }
 
+.projects-gallery li:hover img {
+  transform: scale(1.1); /* Increase image size by 20% on hover */
+  transition: transform 0.3s ease-in-out; /* Add smooth transition */
+}
+
+
+/* Individual Project Page with Project Details */
+
+.x-button {
+  margin-top: 120px;
+  margin-left: 85%;
+}
+
+.x-button button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #414140;
+  color: white;
+  font-family: 'futura';
+  font-family: 600;
+  font-size: 26px;
+  border-radius: 50px;
+}
+
+.x-button button:hover {
+  background-color: #727270;
+}
+
+
+.individual-project-image img {
+  max-width: 60%;
+  height: auto;
+  margin-left: 20%;
+  margin-left: 20%;
+}
+
+.project-image-title {
+  margin-top: 65px;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #414140;
+  font-family: 'futura';
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.project-image-desc {
+  margin-top: 6%;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #414140;
+  font-family: 'futura';
+  font-weight: 400;
+  font-size: 24px;
+}
