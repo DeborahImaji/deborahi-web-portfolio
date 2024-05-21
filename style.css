@@ -32,12 +32,11 @@ body {
 }
 
 a {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit text color from parent element */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .navbar {
-  /* Fix the navigation bar to the top */
   top: 0;
   width: 100%;
   height: 75px;
@@ -96,7 +95,6 @@ a {
 
 .navigation-links:hover::after {
   width: 80%;
-  /* Expand the line to full width on hover */
 }
 
 
@@ -111,7 +109,6 @@ a {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* Adjust based on your design */
   overflow: hidden;
 }
 
@@ -166,11 +163,11 @@ a {
 }
 
 /* Home Screen: Section 2 */
+
 .homescreen2-container {
   position: relative;
   width: 100%;
   height: 60%;
-  /* Adjust based on your design */
   overflow: hidden;
   text-align: center;
 }
@@ -351,19 +348,19 @@ a {
 }
 
 .view-all-button::after {
-  content: ""; /* Empty content */
-  display: none; /* Initially hidden */
-  position: absolute; /* Position relative to button */
-  width: 80%;  /* Adjust width as needed */
-  height: 2px;  /* Adjust line height */
-  background-color: black; /* Line color */
-  left: 12%;  /* Position horizontally */
-  bottom: 0;  /* Position at bottom */
-  transition: display 0.3s ease-in-out; /* Add hover transition */
+  content: ""; 
+  display: none; 
+  position: absolute; 
+  width: 80%;  
+  height: 2px;  
+  background-color: black; 
+  left: 12%;  
+  bottom: 0;  
+  transition: display 0.3s ease-in-out; 
 }
 
 .view-all-button:hover::after {
-  display: block; /* Show the line on hover */
+  display: block; 
 }
 
 .projects-heading {
@@ -382,8 +379,8 @@ a {
 
 .projects-gallery-container {
   display: flex;
-  min-height: 50vh; /* Set minimum height to viewport height */
-  justify-content: center; /* Center content vertically */
+  min-height: 50vh; 
+  justify-content: center; 
   align-items: center;
 }
 
@@ -417,8 +414,8 @@ a {
 }
 
 .projects-gallery li:hover img {
-  transform: scale(1.1); /* Increase image size by 20% on hover */
-  transition: transform 0.3s ease-in-out; /* Add smooth transition */
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out; 
 }
 
 
@@ -471,4 +468,129 @@ a {
   font-family: 'futura';
   font-weight: 400;
   font-size: 24px;
+}
+
+
+/* Home Screen: Section 4 */
+
+.homescreen4-heading {
+  margin-top: 10%;
+  margin-left: 3%;
+  margin-right: 3%;
+  text-align: center;
+  color: #414140;
+  font-family: 'futura';
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.homescreen4-text {
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+  text-align: center;
+  color: #414140;
+  font-family: 'futura';
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.homescreen4-button-container {
+  text-align: center;
+}
+
+.homescreen4-button {
+  width: 110px;
+  height: 50px;
+  margin-bottom: 100px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-family: 'futura';
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.homescreen4-button:hover {
+  background-color: #727270;
+}
+
+
+/* Contact Me Page */
+.contact-me-heading {
+  margin-top: 140px;
+  text-align: center;
+  color: #414140;
+  font-family: 'futura';
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.contact-me-text {
+  text-align: center;
+  margin-left: 8%;
+  margin-right: 8%;
+  color: #414140;
+  font-family: 'futura';
+  font-weight: 400;
+  font-size: 28px;
+}
+
+form {
+  width: 35%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+.name-field {
+  width: 100%;
+  height: 35px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 3px;
+}
+
+.email-field {
+  width: 100%;
+  height: 35px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 3px;
+}
+
+.message-field {
+  width: 100%;
+  height: 90px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 4%;
+}
+
+
+
+input[type="submit"] {
+  justify-content: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: #be97d2;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #D8CADF
 }
